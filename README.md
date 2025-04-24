@@ -46,14 +46,14 @@
 ## 📂 Setup Instructions
 
 ```bash
-# Clone the repository
+# clone the repository
 git clone https://github.com/shakshipatel/clipsense.git
 cd clipsense
 
-# Install dependencies
+# install dependencies
 npm install
 
-# Start the development server
+# start the development server
 npm run dev
 ```
 
