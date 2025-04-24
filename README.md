@@ -26,7 +26,7 @@
 
 ## 🛠️ Tech Stack
 
-- **Frontend:** React.js, SCSS
+- **Frontend:** Next.js, SCSS
 - **Backend:** Node.js, Express.js  
 - **AI Integration:** Gemini, Whisper API  
 - **Database:** Primsa  
