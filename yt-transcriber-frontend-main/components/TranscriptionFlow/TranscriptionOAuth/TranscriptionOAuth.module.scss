@@ -1,0 +1,35 @@
+.main_container {
+  display: flex;
+  width: 39.5rem;
+  padding: 2.25rem;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5rem;
+  flex-shrink: 0;
+  border-radius: 1rem;
+  background: var(--COLOR-BACKGROUND-WHITE, #FFF);
+
+  h1 {
+    color: var(--COLOR-TEXT-PRIMARY, #394759);
+    text-align: center;
+    font-size: 2.25rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+  }
+
+  p {
+    text-align: center;
+    leading-trim: both;
+    text-edge: cap;
+    font-size: 1.25rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    background: var(--gradient-1, linear-gradient(135deg, #24E1C8 0.26%, #6458E4 99.74%));
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+}

@@ -1,0 +1,30 @@
+.simple_input {
+  outline: none;
+  display: flex;
+  padding: 1.25rem;
+  justify-content: center;
+  align-items: center;
+  gap: 0.625rem;
+  align-self: stretch;
+  border-radius: 125000rem;
+  border: 1px solid var(--COLOR-BORDER-PRIMARY, #F0F3FA);
+  background: var(--COLOR-BACKGROUND-WHITE, #FFF);
+
+  color: var(--COLOR-TEXT-PRIMARY, #394759);
+  leading-trim: both;
+  text-edge: cap;
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+
+  &::placeholder {
+    color: var(--COLOR-TEXT-TERTIARY, #8193A8);
+    leading-trim: both;
+    text-edge: cap;
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+  }
+}

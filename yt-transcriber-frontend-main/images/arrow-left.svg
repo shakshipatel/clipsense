@@ -1,0 +1,18 @@
+<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="vuesax/linear/arrow-left">
+<g id="arrow-left">
+<path id="Vector" d="M7.97508 4.94167L2.91675 10L7.97508 15.0583" stroke="url(#paint0_linear_441_113)" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+<path id="Vector_2" d="M17.0834 10H3.05835" stroke="url(#paint1_linear_441_113)" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+</g>
+</g>
+<defs>
+<linearGradient id="paint0_linear_441_113" x1="2.94361" y1="4.94167" x2="11.0026" y2="9.01443" gradientUnits="userSpaceOnUse">
+<stop stop-color="#24E1C8"/>
+<stop offset="1" stop-color="#6458E4"/>
+</linearGradient>
+<linearGradient id="paint1_linear_441_113" x1="3.13284" y1="10" x2="3.27175" y2="11.9691" gradientUnits="userSpaceOnUse">
+<stop stop-color="#24E1C8"/>
+<stop offset="1" stop-color="#6458E4"/>
+</linearGradient>
+</defs>
+</svg>

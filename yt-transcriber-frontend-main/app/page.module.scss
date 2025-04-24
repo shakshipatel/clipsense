@@ -1,0 +1,31 @@
+.main_container {
+  border-radius: 1.25rem;
+  background: linear-gradient(135deg, rgba(36, 225, 200, 0.08) 0.26%, rgba(100, 88, 228, 0.08) 99.74%);
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  padding: 1.5rem;
+  justify-content: center;
+  position: relative;
+
+  .back_btn {
+    position: absolute;
+    top: 1.5rem;
+    left: 1.5rem;
+  }
+
+  .outline_p {
+    text-align: center;
+    leading-trim: both;
+    text-edge: cap; 
+    font-size: 1.25rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    background: var(--gradient-1, linear-gradient(135deg, #24E1C8 0.26%, #6458E4 99.74%));
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+}

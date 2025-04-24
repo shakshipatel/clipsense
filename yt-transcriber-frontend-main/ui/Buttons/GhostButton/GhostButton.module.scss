@@ -1,0 +1,10 @@
+.ghost_button {
+  display: flex;
+  padding: 1rem 1.5rem;
+  justify-content: center;
+  align-items: center;
+  gap: 0.625rem;
+  border-radius: 12500rem;
+  background: var(--COLOR-MAIN-0, #FFF);
+  cursor: pointer;
+}

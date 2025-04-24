@@ -1,0 +1,66 @@
+.navbar {
+  display: flex;
+  padding: 1rem;
+  justify-content: space-between;
+  align-items: center;
+  align-self: stretch;
+  border-radius: 1rem;
+  background: var(--COLOR-MAIN-0, #fff);
+
+  .text_container {
+    display: flex;
+    width: 34rem;
+    flex-direction: column;
+    justify-content: center;
+    gap: 0.75rem;
+
+    .title {
+      color: var(--COLOR-TEXT-PRIMARY, #394759);
+      font-feature-settings: "liga" off, "clig" off;
+      font-size: 1.25rem;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 1.3125rem;
+    }
+
+    .info_container {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      align-self: stretch;
+
+      .info {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 0.25rem;
+
+        p {
+          color: var(--COLOR-TEXT-SECONDARY, #567191);
+          font-feature-settings: "liga" off, "clig" off;
+          font-size: 0.875rem;
+          font-style: normal;
+          font-weight: 400;
+          line-height: normal;
+        }
+      }
+    }
+  }
+
+  .action_container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+
+    p {
+      background: var(
+        --gradient-1,
+        linear-gradient(135deg, #24e1c8 0.26%, #6458e4 99.74%)
+      );
+      background-clip: text;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+  }
+}

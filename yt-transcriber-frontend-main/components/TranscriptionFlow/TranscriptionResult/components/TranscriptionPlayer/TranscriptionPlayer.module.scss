@@ -1,0 +1,27 @@
+.main_container {
+  display: flex;
+  padding: 1.25rem;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5rem;
+  align-self: stretch;
+  border-radius: 1rem;
+  background: #FFF;
+  height: 20rem;
+  width: 100%;
+  
+  .video {
+    // height: 8.87769rem;
+    align-self: stretch;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    border-radius: 1rem;
+
+    .player{
+      width: 100%;
+    }
+  }
+}

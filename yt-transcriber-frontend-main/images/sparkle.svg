@@ -1,0 +1,11 @@
+<svg width="16" height="17" viewBox="0 0 16 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="vuesax/linear/sparkle">
+<path id="Icon" fill-rule="evenodd" clip-rule="evenodd" d="M14.1666 8.68766C9.88418 8.68766 7.99992 10.5719 7.99992 14.8543C7.99992 10.5719 6.11566 8.68766 1.83325 8.68766C6.11566 8.68766 7.99992 6.8034 7.99992 2.521C7.99992 6.8034 9.88418 8.68766 14.1666 8.68766Z" stroke="url(#paint0_linear_236_870)" stroke-width="1.5" stroke-linejoin="round"/>
+</g>
+<defs>
+<linearGradient id="paint0_linear_236_870" x1="1.89876" y1="2.521" x2="14.1011" y2="14.8543" gradientUnits="userSpaceOnUse">
+<stop stop-color="#24E1C8"/>
+<stop offset="1" stop-color="#6458E4"/>
+</linearGradient>
+</defs>
+</svg>
