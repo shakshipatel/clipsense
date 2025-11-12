@@ -1,5 +1,9 @@
 # 🎬 ClipSense – Smart YouTube Video Summarizer
 
+<p align="center">
+  <img src="./thumbnail.png" alt="Task Management Application Banner" width="100%" />
+</p>
+
 **ClipSense** is an AI-powered tool that helps users **summarize YouTube videos** into **text, audio, and visual formats**. Whether you're a student, professional, or casual viewer, ClipSense lets you **grasp key insights in seconds** – saving time and boosting productivity.
 
 ---
