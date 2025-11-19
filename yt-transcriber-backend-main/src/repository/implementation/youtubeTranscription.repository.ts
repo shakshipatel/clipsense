@@ -11,14 +11,23 @@ class YoutubeTranscriptionRepository implements YoutubeTranscriptionRepositoryCo
 
   createYoutubeTranscription = async ({ videoId, imageGenerationPrompt, detailedAnalysis, summary, finalThought, }: { videoId: string; imageGenerationPrompt: string; detailedAnalysis: string; summary: string; finalThought: string; }): Promise<YoutubeTranscription> => {
     try {
-      const youtubeTranscription = await this.prismaClient.youtubeTranscription.create({
-        data: {
+      const youtubeTranscription = await this.prismaClient.youtubeTranscription.upsert({
+        where: {
+          videoId,
+        },
+        update: {
+          imageGenerationPrompt,
+          detailedAnalysis,
+          summary,
+          finalThought,
+        },
+        create: {
           videoId,
           imageGenerationPrompt,
           detailedAnalysis,
           summary,
           finalThought,
-        }
+        },
       })
 
       return youtubeTranscription;

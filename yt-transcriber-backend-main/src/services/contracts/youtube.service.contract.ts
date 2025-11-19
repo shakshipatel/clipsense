@@ -22,7 +22,7 @@ export type YoutubeDataResponse = {
     }
   } | null,
   hashtags: string[],
-  transcription: { text: string, duration: number, offset: number, lang?: string | undefined }[],
+  // transcription: { text: string, duration: number, offset: number, lang?: string | undefined }[],
   results?: YoutubeTranscriptionExtend | null
 }
 

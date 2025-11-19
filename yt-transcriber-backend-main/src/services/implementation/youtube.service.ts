@@ -18,7 +18,7 @@ class YoutubeService implements YoutubeServiceContract {
   private sentimentRepository: SentimentRepository
   private keywordRepository: KeywordRepository
   private youtubeUserRepository: YoutubeUserRepository
-  
+
   constructor(gemini: GoogleGenAIInstance, youtubeTranscriptionRepository: YoutubeTranscriptionRepository, hashTagsRepository: HashTagsRepository, sentimentRepository: SentimentRepository, keywordRepository: KeywordRepository, youtubeUserRepository: YoutubeUserRepository) {
     this.gemini = gemini;
     this.youtubeTranscriptionRepository = youtubeTranscriptionRepository;
@@ -38,10 +38,12 @@ class YoutubeService implements YoutubeServiceContract {
           youtubeUser = await this.youtubeUserRepository.createYoutubeUser(existingData.id, user_id)
         }
 
-        const keywords: {[key: string]: {
-          surrounding_text: string;
-          definition: string;
-        }} = {}
+        const keywords: {
+          [key: string]: {
+            surrounding_text: string;
+            definition: string;
+          }
+        } = {}
         for (const key of existingData.Keywords) {
           keywords[key.key] = {
             surrounding_text: key.surrounding_text,
@@ -64,17 +66,13 @@ class YoutubeService implements YoutubeServiceContract {
             overallSentiment: existingData.Sentiment?.overallSentiment || "",
           },
           hashtags: existingData.Hashtags.map((hashtag) => hashtag.hashtag),
-          transcription: transcriptions,
           results: existingData,
           youtubeUser: youtubeUser
         }
         return returnData
       }
 
-      let wholeText = "";
-      for (const transcript of transcriptions) {
-        wholeText += transcript.text + ". ";
-      }
+      let wholeText = transcriptions;
 
       const summaryRaw = await this.gemini.generateVideoSummary(wholeText);
       const summarySemiParsed = parseSummaryJson(summaryRaw);
@@ -95,6 +93,22 @@ class YoutubeService implements YoutubeServiceContract {
 
       const imageGenerationPrompt = await this.gemini.getVideoImageGenerationPrompt(wholeText);
 
+      logger.info("Storing Youtube transcription data to DB", {
+        videoId: youtubeUrl,
+        detailedAnalysis: detailedSummary,
+        summary: summary?.text || "",
+        finalThought: summary?.final_thought || "",
+        imageGenerationPrompt: imageGenerationPrompt,
+      });
+      console.log(
+        "Storing Youtube transcription data to DB", {
+          videoId: youtubeUrl,
+          detailedAnalysis: detailedSummary,
+          summary: summary?.text || "",
+          finalThought: summary?.final_thought || "",
+          imageGenerationPrompt: imageGenerationPrompt,
+        }
+      )
       const youtubeTranscriptionRes = await this.youtubeTranscriptionRepository.createYoutubeTranscription({
         videoId: youtubeUrl,
         detailedAnalysis: detailedSummary,
@@ -133,7 +147,7 @@ class YoutubeService implements YoutubeServiceContract {
       }
       return data;
     } catch (error: any) {
-      logger.error("Error in YoutubeService:", error);
+      logger.error("Error in YoutubeService: " + error?.message, error);
       throw new Error(error)
     }
   }
@@ -156,10 +170,12 @@ class YoutubeService implements YoutubeServiceContract {
           youtubeUser = await this.youtubeUserRepository.createYoutubeUser(existingData.id, user_id)
         }
 
-        const keywords: {[key: string]: {
-          surrounding_text: string;
-          definition: string;
-        }} = {}
+        const keywords: {
+          [key: string]: {
+            surrounding_text: string;
+            definition: string;
+          }
+        } = {}
         for (const key of existingData.Keywords) {
           keywords[key.key] = {
             surrounding_text: key.surrounding_text,
@@ -182,7 +198,7 @@ class YoutubeService implements YoutubeServiceContract {
             overallSentiment: existingData.Sentiment?.overallSentiment || "",
           },
           hashtags: existingData.Hashtags.map((hashtag) => hashtag.hashtag),
-          transcription: transcriptions,
+          // transcription: transcriptions,
           results: existingData,
           youtubeUser: youtubeUser
         }

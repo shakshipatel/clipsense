@@ -27,6 +27,7 @@
   "dependencies": {
     "@google/generative-ai": "^0.24.0",
     "@prisma/client": "^6.5.0",
+    "apify-client": "^2.19.0",
     "axios": "^1.8.4",
     "body-parser": "^1.20.3",
     "cors": "^2.8.5",

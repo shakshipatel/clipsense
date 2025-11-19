@@ -52,7 +52,7 @@ const TranscriptionField = () => {
       </div>
       <div className={styles.transcript_container}>
       {
-        transcript?.map((value, index) => {
+        transcript?.map?.((value, index) => {
           return (
             <TranscriptionCell key={index} text={value.text} offset={value.offset} />
           )
